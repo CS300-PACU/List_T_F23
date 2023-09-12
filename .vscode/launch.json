@@ -5,15 +5,42 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "(lldb) Launch", // Change name
+      "name": "(lldb) listdriverpublic", // Change name
       "type": "lldb",
       "request": "launch",
-      "program": "${workspaceFolder}/bin/main", // THIS IS IMPORTANT
+      "program": "${workspaceFolder}/List/bin/listdriverpublic", // THIS IS IMPORTANT
       "args": [], // add comma separated list of args here.
-      "cwd": "${workspaceFolder}",
+      "cwd": "${workspaceFolder}/List",
       "preLaunchTask": "runMake", // THIS IS IMPORTANT
     },
     {
+      "name": "(lldb) tinyDB", // Change name
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/List/bin/tinyDB", // THIS IS IMPORTANT
+      "args": [], // add comma separated list of args here.
+      "cwd": "${workspaceFolder}/List",
+      "preLaunchTask": "runMake", // THIS IS IMPORTANT
+    },
+        {
+      "name": "(lldb) htdriver", // Change name
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/Hashtable/bin/htdriver", // THIS IS IMPORTANT
+      "args": [], // add comma separated list of args here.
+      "cwd": "${workspaceFolder}/Hashtable",
+      "preLaunchTask": "runMake", // THIS IS IMPORTANT
+    },
+    {
+      "name": "(lldb) htinvoiceDriver", // Change name
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/Hashtable/bin/htinvoiceDriver", // THIS IS IMPORTANT
+      "args": [], // add comma separated list of args here.
+      "cwd": "${workspaceFolder}/Hashtable",
+      "preLaunchTask": "runMake", // THIS IS IMPORTANT
+    },
+/*    {
       "name": "(lldb) Launch with args", // Change name
       "type": "lldb",
       "request": "launch",
@@ -22,7 +49,7 @@
       "cwd": "${workspaceFolder}",
       "preLaunchTask": "runMake", // THIS IS IMPORTANT
     },
-/*    {
+   {
       "name": "(gdb) Launch with args", // Change name
       "type": "cppdbg",
       "request": "launch",
