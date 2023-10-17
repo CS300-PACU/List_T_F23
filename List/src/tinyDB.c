@@ -139,11 +139,9 @@ void loadDB(ListPtr psTheList)
   Part sItem;
 
   pDB = fopen("data/items.dat","r");
-	while(!feof(pDB))
+	while(EOF != fscanf(pDB, "%d %lf",&sItem.partNumber, &sItem.price))
 	{
-		fscanf(pDB, "%d %lf",&sItem.partNumber, &sItem.price);
-
-    // TODO: Insert item into the list
+		// TODO: Insert item into the list
 
 
 	}
@@ -171,10 +169,8 @@ int main()
   lstCreate(&sTheDB, sizeof(Part));
   loadDB(&sTheDB);
   pActions = fopen("data/actions.dat","r");
-	while(!feof(pActions))
+	while(EOF != fscanf(pActions, "%c",&action))
 	{
-		fscanf(pActions, "%c ",&action); // this space is important!
-
     switch(action)
     {
       case 'P':
