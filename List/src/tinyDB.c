@@ -173,7 +173,7 @@ int main()
   pActions = fopen("data/actions.dat","r");
 	while(!feof(pActions))
 	{
-		fscanf(pActions, "%c",&action);
+		fscanf(pActions, "%c ",&action); // this space is important!
 
     switch(action)
     {
