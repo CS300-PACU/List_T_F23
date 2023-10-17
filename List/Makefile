@@ -9,7 +9,7 @@
 
 CFLAGS=-g -Wall
 VALGRIND_FLAGS=-v --leak-check=yes --track-origins=yes --leak-check=full --show-leak-kinds=all
-TARGETS=bin/tinyDB bin/listdriverpublic
+TARGETS=bin/tinyDB bin/listtester
 all: bin ${TARGETS}
 
 
@@ -22,11 +22,11 @@ bin/tinyDB: bin bin/tinyDB.o bin/list.o
 bin/tinyDB.o: src/tinyDB.c include/list.h
 	gcc -c -o bin/tinyDB.o ${CFLAGS} src/tinyDB.c
 
-bin/listdriverpublic: bin bin/listdriverpublic.o bin/list.o
-	gcc -o bin/listdriverpublic ${CFLAGS} bin/listdriverpublic.o bin/list.o
+bin/listtester: bin bin/listtester.o bin/list.o
+	gcc -o bin/listtester ${CFLAGS} bin/listtester.o bin/list.o -lm
 
-bin/listdriverpublic.o: src/listdriverpublic.c include/list.h
-	gcc -c -o bin/listdriverpublic.o ${CFLAGS} src/listdriverpublic.c
+bin/listtester.o: src/listtester.c include/list.h
+	gcc -c -o bin/listtester.o ${CFLAGS} src/listtester.c
 
 bin/list.o: src/list.c include/list.h
 	gcc -c -o bin/list.o src/list.c ${CFLAGS}
