@@ -35,4 +35,4 @@ printAll:
 	enscript -C -T 2 -p - -M Letter -Ec --color -fCourier8 src/main.c  | ps2pdf - bin/main.pdf
 
 clean:
-	rm -f ${TARGETS} bin/*.o bin/*.pdf
+	
