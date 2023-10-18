@@ -5,10 +5,10 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "(lldb) listdriverpublic", // Change name
+      "name": "(lldb) listtester", // Change name
       "type": "lldb",
       "request": "launch",
-      "program": "${workspaceFolder}/List/bin/listdriverpublic", // THIS IS IMPORTANT
+      "program": "${workspaceFolder}/List/bin/listtester", // THIS IS IMPORTANT
       "args": [], // add comma separated list of args here.
       "cwd": "${workspaceFolder}/List",
       "preLaunchTask": "runMake", // THIS IS IMPORTANT
