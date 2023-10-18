@@ -8,21 +8,21 @@
 #############################################################################
 
 CFLAGS=-g -Wall
-VALGRIND_FLAGS=-v --leak-check=yes --track-origins=yes --leak-check=full --show-leak-kinds=all
+
+VALGRIND_FLAGS=-v --leak-check=yes --track-origins=yes --leak-check=full\
+--show-leak-kinds=all
+
 TARGETS=bin/tinyDB bin/listtester
-all: bin ${TARGETS}
 
+all: ${TARGETS}
 
-bin:
-	mkdir -p bin
-
-bin/tinyDB: bin bin/tinyDB.o bin/list.o
+bin/tinyDB: bin/tinyDB.o bin/list.o
 	gcc -o bin/tinyDB ${CFLAGS} bin/tinyDB.o bin/list.o
 
 bin/tinyDB.o: src/tinyDB.c include/list.h
 	gcc -c -o bin/tinyDB.o ${CFLAGS} src/tinyDB.c
 
-bin/listtester: bin bin/listtester.o bin/list.o
+bin/listtester: bin/listtester.o bin/list.o
 	gcc -o bin/listtester ${CFLAGS} bin/listtester.o bin/list.o -lm
 
 bin/listtester.o: src/listtester.c include/list.h
