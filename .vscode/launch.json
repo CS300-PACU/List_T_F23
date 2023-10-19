@@ -23,10 +23,10 @@
       "preLaunchTask": "runMake", // THIS IS IMPORTANT
     },
         {
-      "name": "(lldb) htdriver", // Change name
+      "name": "(lldb) httester", // Change name
       "type": "lldb",
       "request": "launch",
-      "program": "${workspaceFolder}/Hashtable/bin/htdriver", // THIS IS IMPORTANT
+      "program": "${workspaceFolder}/Hashtable/bin/httester", // THIS IS IMPORTANT
       "args": [], // add comma separated list of args here.
       "cwd": "${workspaceFolder}/Hashtable",
       "preLaunchTask": "runMake", // THIS IS IMPORTANT
