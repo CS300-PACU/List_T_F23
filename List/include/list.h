@@ -23,10 +23,6 @@
 typedef struct ListElement *ListElementPtr;
 typedef struct ListElement
 {
-	// Note: The memory allocated for data cannot contain any pointers to
-	//		 additional data or terminate will not work correctly; therefore,
-	//		 data must point to a contiguous block of data and contain no
-	// 		 additional pointers.
 	void *pData;
 	ListElementPtr psNext;
 } ListElement;
@@ -88,8 +84,8 @@ extern bool lstHasCurrent (const ListPtr psList);
 //*************************************************************************
 extern void *lstPeek (const ListPtr psList, void *pBuffer);
 // requires:  List is not empty
-// results:   The value of the current element pointed to by psCurrent
-//            is returned
+// results:   A copy of the pData of the current element pointed to by
+//            psCurrent is returned
 // IMPORTANT: Do not change psCurrent
 
 
@@ -98,7 +94,7 @@ extern void *lstPeek (const ListPtr psList, void *pBuffer);
 //*************************************************************************
 extern void lstFirst (ListPtr psList);
 // requires:  List is not empty
-// results:   If the list is not empty, psCurrent is changed to
+// results:   If the list is not empty, psCurrent is set to
 //            the first element
 
 extern void lstNext (ListPtr psList);
@@ -110,14 +106,13 @@ extern void lstNext (ListPtr psList);
 extern void lstLast (ListPtr psList);
 // requires:  List is not empty
 // results:   If the list is not empty,
-//  		      psCurrent is changed to psLast
+//  		      psCurrent is set to psLast
 
 //*************************************************************************
 //									Insertion, Deletion, and Updating
 //*************************************************************************
 
 extern void lstInsertAfter (ListPtr psList, const void *pBuffer);
-// requires: List is not full
 // results:  If the list is not empty, insert the new element as the
 //           successor of the current element pointed to by psCurrent
 //           and make the inserted element the current element pointed to
@@ -133,7 +128,6 @@ extern void *lstDeleteCurrent (ListPtr psList, void *pBuffer);
 // 			it exists. The value of the deleted element is returned.
 
 extern void lstInsertBefore (ListPtr psList, const void *pBuffer);
-// requires: List is not full
 // results:  If the list is not empty, insert the new element as the
 //           predecessor of the current element and make the inserted
 //           element the current element; otherwise, insert element
@@ -143,7 +137,7 @@ extern void lstUpdateCurrent (ListPtr psList, const void *pBuffer);
 // requires: List is not empty
 // results:  The value of pBuffer is copied into the current element
 // IMPORTANT: user could update with smaller, larger, or the same size data
-//			  so free data, then reallocate based on size before updating
+//			  		so free data, then reallocate based on size before updating
 
 extern void lstReverse(ListPtr psList); // optional. Reverses the List
 
