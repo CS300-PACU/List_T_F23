@@ -61,7 +61,7 @@ void printPart(const Part *psItem)
  ****************************************************************************/
 void print(ListPtr psTheList, int partNumber)
 {
-  Part sElem;
+  //Part sElem;
 
 
 }
@@ -80,7 +80,7 @@ void print(ListPtr psTheList, int partNumber)
  ****************************************************************************/
 void buy(ListPtr psTheList, int partNumber, int quantity)
 {
-  Part sElem;
+  //Part sElem;
 
 }
 
@@ -95,7 +95,7 @@ void buy(ListPtr psTheList, int partNumber, int quantity)
  ****************************************************************************/
 void listAll(ListPtr psTheList)
 {
-  Part sItem;
+  //Part sItem;
 
   printf("Print All:\n");
   printf("----------\n");
@@ -120,7 +120,7 @@ void listAll(ListPtr psTheList)
  ****************************************************************************/
 void delete(ListPtr psTheList, int partNumber)
 {
-  Part sElem;
+  //Part sElem;
 
 }
 
@@ -160,7 +160,6 @@ void loadDB(ListPtr psTheList)
 int main()
 {
   FILE *pActions;
-  Part sItem;
   List sTheDB;
   char action;
   int partNumber;

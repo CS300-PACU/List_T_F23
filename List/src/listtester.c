@@ -88,10 +88,10 @@ char *szFile, int line) {
 
  Returned:	 	none
  *************************************************************************/
-static void printIntList (List sTheList)
-{
+//static void printIntList (List sTheList)
+//{
   // TODO: write this
-}
+//}
 /**************************************************************************
  Function: 	 	printCharList
 
@@ -101,10 +101,10 @@ static void printIntList (List sTheList)
 
  Returned:	 	none
  *************************************************************************/
-static void printCharList (List sTheList)
-{
+//static void printCharList (List sTheList)
+//{
   // TODO: write this
-}
+//}
 /**************************************************************************
  Function: 	 	main
 
@@ -117,15 +117,11 @@ static void printCharList (List sTheList)
 int main ()
 {
 	List sTheList;
-	int i, intValue;
+	int i;
 	int numValues;
 	int count;
-	char *szData = "CS300";
-	char charValue;
 
-	puts ("Driver Start");
-
-	srand (12);
+	puts ("Program Start");
 
 	// run everything twice so you call
 	// create after terminate!
@@ -174,6 +170,6 @@ int main ()
 
   lstTerminate (&sTheList);
 
-	puts ("Driver End");
+	puts ("Program End");
 	return EXIT_SUCCESS;
 }
