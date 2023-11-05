@@ -39,21 +39,9 @@ bool lstHasCurrent(const ListPtr psList)
   return bHasCurrent;
 }
 
-bool lstHasNext(const ListPtr psList)
-{
-  bool bHasNext = true;
- 
-  return bHasNext;
-}
-
 void* lstPeek(const ListPtr psList, void *pBuffer)
 {
 
-  return NULL;
-}
-
-void* lstPeekNext(const ListPtr psList, void *pBuffer)
-{
   return NULL;
 }
 
@@ -88,3 +76,9 @@ void *lstDeleteCurrent (ListPtr psList, void *pBuffer)
 void lstUpdateCurrent (ListPtr psList, const void *pBuffer)
 {
 }
+
+// BONUS
+void lstReverse(ListPtr psList)
+{
+}
+void lstReverse(ListPtr psList)
