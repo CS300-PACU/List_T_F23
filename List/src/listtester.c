@@ -84,11 +84,11 @@ char *szFile, int line) {
 
  Description: Prints a list of integers for debugging purposes.
 
- Parameters:	sTheList - the list of integers to be printed
+ Parameters:	psTheList - the list of integers to be printed
 
  Returned:	 	none
  *************************************************************************/
-//static void printIntList (List sTheList)
+//static void printIntList (ListPtr psTheList)
 //{
   // TODO: write this
 //}
@@ -97,11 +97,11 @@ char *szFile, int line) {
 
  Description: Prints a list of chars for debugging purposes.
 
- Parameters:	sTheList - the list of chars to be printed
+ Parameters:	psTheList - the list of chars to be printed
 
  Returned:	 	none
  *************************************************************************/
-//static void printCharList (List sTheList)
+//static void printCharList (ListPtr psTheList)
 //{
   // TODO: write this
 //}
