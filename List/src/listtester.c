@@ -12,72 +12,7 @@
 #include <stdbool.h>
 #include <string.h>
 #include "../include/list.h"
-#include <math.h>
-
-#define assert(cond, trueMsg, falseMsg) \
-checkAssert(cond, trueMsg, falseMsg, __FILE__, __LINE__)
-
-
-/****************************************************************************
- Function: 	 	success
-
- Description: print a success message
-
- Parameters:	szStr - the message to print
-
- Returned:	 	none
-****************************************************************************/
-static void success (char* szStr) {
-	printf ("SUCCESS: %s\n", szStr);
-}
-
-/****************************************************************************
- Function: 	 	failure
-
- Description: print a failure message
-
- Parameters:	szStr - the message to print
-
- Returned:	 	none
- ****************************************************************************/
-static void failure (char* szStr) {
-	printf ("FAILURE: %s\n", szStr);
-}
-
-/****************************************************************************
- Function: 	 	checkAssert
-
- Description: if the expression is true, assert success; otherwise, assert
-							failure
-							DO NOT CALL THIS FUNCTION DIRECTLY
-							use: assert(cond, trueMsg, falseMsg);
-
- Parameters:	szStr - the message to print
-
- Returned:	 	none
- ****************************************************************************/
-static void checkAssert (bool bExpression, char* pTrue, char* pFalse, 
-char *szFile, int line) {
-
-	char *pStr;
-	int fileAndLineLength;
-	const int SPACES = 5; // " - " ':' '\0'
-
-	fileAndLineLength = strlen(szFile) + (int) log(line);
-
-	if (bExpression) {
-		pStr = malloc(strlen(pTrue) + fileAndLineLength + SPACES);
-		sprintf(pStr, "%s - %s:%d", pTrue, szFile, line);
-		success (pStr);
-	}
-	else {
-		pStr = malloc(strlen(pFalse) + fileAndLineLength + SPACES);
-		sprintf(pStr, "%s - %s:%d", pFalse, szFile, line);
-		failure (pStr);
-	}
-	free(pStr);
-	fflush(NULL);
-}
+#include "../include/driverUtil.h"
 
 /**************************************************************************
  Function: 	 	printList
@@ -130,8 +65,7 @@ int main ()
 		lstCreate (&sTheList, sizeof(int));
 		success ("List Created");
 
-		assert( 0 == lstSize (&sTheList), "The list size is 0",
-				"The list size is not 0");
+		assert( 0 == lstSize (&sTheList), "The list size is 0");
 
 
 		numValues = 10;
@@ -141,8 +75,7 @@ int main ()
 
 			if( i+1 != lstSize (&sTheList) )
 			{
-				assert( i+1 == lstSize (&sTheList), "The list size correctly sized",
-					"The list size is wrong");
+				assert( i+1 == lstSize (&sTheList), "The list size correctly sized");
 			}
 		}
 
