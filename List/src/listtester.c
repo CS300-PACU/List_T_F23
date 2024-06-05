@@ -63,7 +63,6 @@ int main ()
 	for (count = 0; count < 2 ; ++count)
 	{
 		lstCreate (&sTheList, sizeof(int));
-		success ("List Created");
 
 		assert( 0 == lstSize (&sTheList), "The list size is 0");
 
