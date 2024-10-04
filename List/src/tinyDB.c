@@ -189,6 +189,8 @@ int main()
         break;
     }
   }
+	lstTerminate(&sTheDB);
+	
   fclose(pActions);
 
   return EXIT_SUCCESS;

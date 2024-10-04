@@ -78,7 +78,7 @@ int main ()
 			}
 		}
 
-		lstFirst (&sTheList);
+		assert(lstFirst (&sTheList), "lstFirst after loop");
 
 		for (i = 0; i < numValues; ++i)
 		{

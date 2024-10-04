@@ -39,46 +39,51 @@ bool lstHasCurrent(const ListPtr psList)
   return bHasCurrent;
 }
 
-void* lstPeek(const ListPtr psList, void *pBuffer)
+bool lstPeek(const ListPtr psList, void *pBuffer)
 {
 
-  return NULL;
+  return false;
 }
 
-void lstFirst(ListPtr psList)
+bool lstFirst(ListPtr psList)
 {
-
+  return false;
 }
 
-void lstLast(ListPtr psList)
+bool lstLast(ListPtr psList)
 {
+  return false;
 }
 
 
-void lstNext(ListPtr psList)
+bool lstNext(ListPtr psList)
 {
+  return false;
 }
 
-void lstInsertAfter(ListPtr psList, const void *pBuffer)
+bool lstInsertAfter(ListPtr psList, const void *pBuffer)
 {
+  return false;
 }
 
-void lstInsertBefore(ListPtr psList, const void *pBuffer)
+bool lstInsertBefore(ListPtr psList, const void *pBuffer)
 {
+  return false;
 }
 
-void *lstDeleteCurrent (ListPtr psList, void *pBuffer)
+bool lstDeleteCurrent (ListPtr psList, void *pBuffer)
 {
 
-  return NULL;
+  return false;
 }
 
-void lstUpdateCurrent (ListPtr psList, const void *pBuffer)
+bool lstUpdateCurrent (ListPtr psList, const void *pBuffer)
 {
+  return false;
 }
 
 // BONUS
-void lstReverse(ListPtr psList)
+bool lstReverse(ListPtr psList)
 {
+  return false;
 }
-void lstReverse(ListPtr psList)
