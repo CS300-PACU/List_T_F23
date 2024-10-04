@@ -1,5 +1,5 @@
 /**************************************************************************
- File name:  htDriver.c
+ File name:  httester.c
  Author:     
  Date:			 
  Class:			 CS300
