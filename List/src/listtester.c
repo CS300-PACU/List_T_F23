@@ -55,6 +55,7 @@ int main ()
 	int i;
 	int numValues;
 	int count;
+	bool bValidResult;
 
 	puts ("Program Start");
 
@@ -70,8 +71,10 @@ int main ()
 		numValues = 10;
 		for (i = 0; i < numValues; ++i)
 		{
-			lstInsertAfter (&sTheList, &i);
-
+			bValidResult = lstInsertAfter (&sTheList, &i);
+			if (!bValidResult) {
+				assert (bValidResult, "lstInsertAfter -- loop");
+			}
 			if( i+1 != lstSize (&sTheList) )
 			{
 				assert( i+1 == lstSize (&sTheList), "The list size correctly sized");
